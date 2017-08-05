@@ -72,23 +72,26 @@ class ViewController: UIViewController {
     //進むボタンのメソッド
     func nextButton(_ sender: Any) {
         
-        index += 1
-        imageView.image = images[index]
         
         if index == 3 {
            index = 0
+        }else{
+            index += 1
         }
+        imageView.image = images[index]
     }
     
     //戻るボタンのメソッド
     func backButton(_ sender: Any) {
         
-        index -= 1
-        imageView.image = images[index]
         
         if index == 0{
             index = 3;
+        }else{
+            index -= 1
         }
+        imageView.image = images[index]
+
     }
     
     @IBAction func closeUp(_ sender: Any) {
